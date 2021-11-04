@@ -3,8 +3,8 @@ public class Die {
 
     private int numDots;
 
-    public int roll(){
-        return numDots = (int)(Math.random()*6) + 1;
+    public void roll(){
+        numDots = (int)(Math.random()*6) + 1;
     }
 
 

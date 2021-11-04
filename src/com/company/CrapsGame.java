@@ -23,18 +23,20 @@ public class CrapsGame
             } else if (total == 7 || total == 11) {
                 result = 1;
             }
-            else result = total;
+            else point = total;
         }
-        if (point != 0){
-            if (total == point){
-                point = 0;
-                result = 1;
+        else{
+            if (point != 0){
+                if (total == point){
+                    point = 0;
+                    result = 1;
+                }
+                else if (total == 7){
+                    point = 0;
+                    result = -1;
+                }
+                else result = 0;
             }
-            else if (total == 7){
-                point = 0;
-                result = -1;
-            }
-            else result = 0;
         }
         return result;
     }
